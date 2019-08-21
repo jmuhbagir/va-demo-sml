@@ -1,0 +1,46 @@
+---
+  - name: "open-detik-com"
+    signals:
+      - order: "buka detik"
+    neurons:
+      - script:
+          path: "/root/kalliope_starter_en/scripts/detik.com.sh"
+          async: True
+      - say:
+          message: "Berita apa?"
+      - neurotransmitter:
+          from_answer_link:
+            - synapse: "olahraga"
+              answers:
+                - "olahraga"
+            - synapse: "berita"
+              answers:
+                - "berita"
+          default: "other"
+
+  - name: "olahraga"
+    signals:
+      - order: "olahraga"
+    neurons:
+      - script:
+          path: "/root/kalliope_starter_en/scripts/detik.bola.sh"
+          async: True
+      - say:
+          message: "Bola sudah di buka"
+
+  - name: "berita"
+    signals:
+      - order: "berita"
+    neurons:
+      - script:
+          path: "/root/kalliope_starter_en/scripts/detik.berita.sh"
+          async: True
+      - say:
+          message: "Berita baru sudah di buka"
+
+  - name: "other"
+    signals:
+      - order: "other"
+    neurons:
+      - say:
+          message: "Perintah tidak dapat di kenal kapten"

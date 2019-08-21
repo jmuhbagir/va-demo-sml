@@ -2,6 +2,7 @@
 
   - includes:
         - brains/say.yml
+        - brains/detik.com.yml
         - brains/systemdate.yml
         - brains/neurotransmitter.yml
         - brains/uri.yml
@@ -11,9 +12,9 @@
     neurons:
       - say:
           message:
-            - "I haven't understood"
-            - "I don't know this order"
-            - "Please renew your order"
+            - "Maaf kapten tidak paham"
+            - "Gagal paham kapten"
+            - "Minta tolong di ulang kapten"
             - "Would you please reword your order"
             - "Can ou please reformulate your order"
             - "I don't recognize that order"
@@ -23,16 +24,16 @@
     neurons:
       - say:
           message:
-            - "yes sir?"
-            - "I'm listening"
-            - "I'm listening to you"
-            - "sir?"
-            - "what can i do for you?"
-            - "Speaking"
-            - "how can i help you?"
+            - "Laksanakan Kapten"
+            - "Perintah kapten"
+            - "Dengar kapten"
+            - "kapten?"
+            - "Apa yang bisa saya bantu kapten?"
+            - "Silahkan kapten"
+            - "Bagaimana kapten?"
 
   - name: "on-start-synapse"
     signals: []
     neurons:
       - say:
-          message: "I'm ready"
+          message: "Siap Kapten"

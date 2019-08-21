@@ -15,7 +15,7 @@ default_trigger: "snowboy"
 # - snowboy
 triggers:
   - snowboy:
-      pmdl_file: "trigger/kalliope-EN-12samples.pmdl"
+      pmdl_file: "trigger/Komando.pmdl"
 
 
 # ---------------------------
@@ -35,7 +35,7 @@ default_speech_to_text: "google"
 # - cmusphinx (must be installed first)
 speech_to_text:
   - google:
-      language: "en-EN"
+      language: "id-ID"
 
 # ---------------------------
 # Text to speech
@@ -54,10 +54,10 @@ cache_path: "/tmp/kalliope_tts_cache"
 # - voicerss
 text_to_speech:
   - pico2wave:
-      language: "en-US"
+      language: "it-IT"
       cache: True
   - googletts:
-      language: "en"
+      language: "id-ID"
       cache: True
   - voicerss:
       language: "en-us"
@@ -139,7 +139,7 @@ var_files:
 options:
 #  energy_threshold: 4000                 # Speech to text option
 #  adjust_for_ambient_noise_second: 1     # Speech to text option
-#  stt_timeout: 5                          # Speech to text option
+  stt_timeout: 10                          # Speech to text option
   deaf: False
   mute: False
 

@@ -1,7 +1,21 @@
 ---
-  - name: "say-hello"
+  - name: "say-salam"
     signals:
-      - order: "Hello"
+      - order: "salam komando"
     neurons:
       - say:
-          message: "Hello {{name}}"
+          message: "siap kapten"
+
+  - name: "say-pagi"
+    signals:
+      - order: "selamat pagi"
+    neurons:
+      - say:
+          message: "selamat pagi kapten"
+
+  - name: "say-thanks"
+    signals:
+      - order: "terima kasih"
+    neurons:
+      - say:
+          message: "sama sama kapten"
